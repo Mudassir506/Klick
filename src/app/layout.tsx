@@ -14,9 +14,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Chesse Klick — Klick It. Know It. Win It.",
+  title: "Cheese Klick — Klick. Know. Win.",
   description:
-    "Spot a footballer on TV, klick a pic and unlock instant stats, history and epic insights. Be the first to play.",
+    "Spot a player on TV, klick a pic and unlock instant stats, history and epic insights. One app. Six sports. Infinite bragging rights.",
 };
 
 export default function RootLayout({
@@ -26,7 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${unbounded.variable} ${inter.variable}`}>
-      <body className="min-h-screen bg-background text-foreground">
+      <body
+        className="min-h-screen bg-background text-foreground"
+        suppressHydrationWarning
+      >
         {children}
       </body>
     </html>

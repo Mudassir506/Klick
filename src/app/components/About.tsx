@@ -1,13 +1,9 @@
 import Image from "next/image";
+import { AppleStoreBadge, GooglePlayBadge } from "./Hero";
 
 export default function About() {
   return (
-    <section
-      id="about"
-      className="relative overflow-hidden pt-10 pb-0"
-    >
-      {/* Figma "Rectangle 45248": a green→black linear-gradient panel with one
-          large rounded corner that forms the curve, shown at 55% opacity. */}
+    <section id="about" className="relative overflow-hidden pb-0 pt-10">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-x-0 bottom-0 z-0 h-[65%]"
@@ -20,13 +16,11 @@ export default function About() {
       <div className="pointer-events-none absolute -right-32 bottom-0 h-[420px] w-[420px] glow-green opacity-40" />
 
       <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-6 px-5 lg:grid-cols-2 lg:gap-4">
-        {/* Phone sitting on the green curve */}
         <div className="relative flex items-center justify-center">
-          {/* phone — 3000x3000 square PNG, player centred with transparent margins */}
-          <div className="relative z-10 shrink-0 w-[240%] max-w-[820px] sm:w-[140%] sm:max-w-[520px] lg:w-[200%] lg:max-w-[888px]">
+          <div className="relative z-10 w-[240%] max-w-[820px] shrink-0 sm:w-[140%] sm:max-w-[520px] lg:w-[200%] lg:max-w-[888px]">
             <Image
               src="/app/phone-player.png"
-              alt="Player identified in the Chesse Klick app"
+              alt="Player identified in the Cheese Klick app"
               width={3000}
               height={3000}
               sizes="(max-width: 1024px) 85vw, 42vw"
@@ -35,27 +29,28 @@ export default function About() {
           </div>
         </div>
 
-        {/* Copy */}
         <div>
-          <h2 className="font-display text-5xl sm:text-6xl">About Us</h2>
+          <h2 className="font-display text-5xl sm:text-6xl">
+            Built By Sports Fans.
+            <br />
+            <span className="text-green">For Sports Fans.</span>
+          </h2>
           <p className="mt-6 max-w-lg text-[15px] leading-relaxed text-muted">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry&apos;s standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it to make a type specimen book.
+            We got tired of searching for stats mid-match. So we built the app
+            we always wanted — klick any player on your screen, get each
+            player&apos;s performance instantly, earn points and become the best
+            in the world.
           </p>
-          <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-muted">
-            It has survived not only five centuries, but also the leap into
-            electronic typesetting, remaining essentially unchanged. Spot, klick and
-            know every player on the pitch — instantly.
+          <p className="mt-3 max-w-lg text-[15px] leading-relaxed text-muted">
+            You can now just point and know.{" "}
+            <span className="font-semibold text-white">Cheese Klick</span> is
+            the Shazam moment for sport.
           </p>
 
-          <a
-            href="#download"
-            className="mt-8 inline-block rounded-lg bg-green px-8 py-3 font-semibold text-black transition hover:bg-green-bright"
-          >
-            Download
-          </a>
+          <div className="mt-4 flex flex-col gap-3 sm:flex-row">
+            <AppleStoreBadge />
+            <GooglePlayBadge />
+          </div>
         </div>
       </div>
     </section>

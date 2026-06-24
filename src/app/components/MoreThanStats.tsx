@@ -56,7 +56,7 @@ const BOARD = [
 
 export default function MoreThanStats() {
   return (
-    <section id="shop" className="relative overflow-hidden py-24">
+    <section id="leaderboard" className="relative overflow-hidden py-24">
       <div className="pointer-events-none absolute -right-20 top-1/4 h-[520px] w-[520px] glow-green opacity-50" />
 
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-2">

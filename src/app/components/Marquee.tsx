@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const WORDS = ["KNOW IT.", "WIN IT.", "KLICK IT."];
+const WORDS = ["KNOW.", "WIN.", "KLICK."];
 
 function Strip({ reverse = false }: { reverse?: boolean }) {
   const items = Array.from({ length: 6 }).flatMap(() => WORDS);

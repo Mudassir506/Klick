@@ -1,10 +1,12 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Sports from "./components/Sports";
 import Marquee from "./components/Marquee";
 import HowItWorks from "./components/HowItWorks";
-import Waitlist from "./components/Waitlist";
+import DreamSquad from "./components/DreamSquad";
 import MoreThanStats from "./components/MoreThanStats";
+import Download from "./components/Waitlist";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -14,10 +16,12 @@ export default function Home() {
       <main>
         <Hero />
         <About />
+        <Sports />
         <Marquee />
         <HowItWorks />
-        <Waitlist />
+        <DreamSquad />
         <MoreThanStats />
+        <Download />
       </main>
       <Footer />
     </>
