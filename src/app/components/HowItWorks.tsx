@@ -1,10 +1,11 @@
 import Image from "next/image";
 
 const STEPS = [
-  { n: "1", label: "SEE A PLAYER", img: "/app/see-player.png", green: false },
-  { n: "2", label: "KLICK A PIC", img: "/app/klick-a-pic.png", green: true },
-  { n: "3", label: "GET INSTANT STATS", img: "/app/instant-stats.png", green: false },
-  { n: "4", label: "COMPARE & WIN", img: "/app/compare-win.png", green: false },
+  { n: "1", label: "SEE A PLAYER", img: "/app/see-player.png", green: false, position: "center" },
+  { n: "2", label: "KLICK A PIC", img: "/app/klick-a-pic.png", green: true, position: "center" },
+  // coach sits on the left of the source photo — pull the crop left so he's centred (like Figma)
+  { n: "3", label: "GET INSTANT STATS", img: "/app/instant-stats.png", green: false, position: "left" },
+  { n: "4", label: "COMPARE & WIN", img: "/app/compare-win.png", green: false, position: "center" },
 ];
 
 export default function HowItWorks() {
@@ -28,6 +29,7 @@ export default function HowItWorks() {
                 alt={s.label}
                 fill
                 sizes="(max-width: 1024px) 50vw, 25vw"
+                style={{ objectPosition: s.position }}
                 className={`object-cover ${s.green ? "" : "grayscale"}`}
               />
 

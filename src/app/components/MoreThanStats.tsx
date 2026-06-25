@@ -59,7 +59,8 @@ export default function MoreThanStats() {
     <section id="leaderboard" className="relative overflow-hidden py-24">
       <div className="pointer-events-none absolute -right-20 top-1/4 h-[520px] w-[520px] glow-green opacity-50" />
 
-      <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-2">
+      {/* leaderboard panel hidden — single column now (was: grid items-center gap-14 lg:grid-cols-2) */}
+      <div className="mx-auto max-w-7xl px-5">
         {/* Left */}
         <div>
           <h2 className="font-display text-4xl uppercase leading-tight sm:text-5xl">
@@ -68,9 +69,9 @@ export default function MoreThanStats() {
             <span className="text-green">Stats.</span> It&apos;s A Game.
           </h2>
           <p className="mt-5 max-w-md text-[15px] leading-relaxed text-muted">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry&apos;s standard dummy text
-            ever since the 1500s.
+            Stats apps make you search. We think you should just point and
+            know. Klick any player, unlock instant stats across 6 sports, earn
+            points, climb the leaderboard and become the best in the world.
           </p>
 
           <div className="mt-9 grid max-w-md grid-cols-2 gap-x-8 gap-y-7">
@@ -93,7 +94,8 @@ export default function MoreThanStats() {
           </a>
         </div>
 
-        {/* Right — leaderboard */}
+        {/* Right — leaderboard panel hidden for now. Change `false` to `true` (or remove the wrapper) to restore. */}
+        {false && (
         <div className="relative">
           <div className="relative z-10 rounded-3xl border border-white/10 bg-card p-6">
             <h3 className="text-center font-display text-xl uppercase tracking-wide">
@@ -142,6 +144,7 @@ export default function MoreThanStats() {
             </span>
           </div>
         </div>
+        )}
       </div>
     </section>
   );

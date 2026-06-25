@@ -153,7 +153,7 @@ export default function Hero() {
           <Spark className="animate-float-slow absolute left-[1%] top-[1%] z-30 h-8 w-8" />
           <Spark className="animate-float absolute left-[12%] top-[8%] z-30 h-4 w-4" />
 
-          <div className="animate-float-slow absolute left-[37%] top-[54%] z-10 w-[150%] -translate-x-1/2 -translate-y-1/2">
+          <div className="animate-float-slow absolute left-[30%] top-[54%] z-10 w-[150%] -translate-x-1/2 -translate-y-1/2">
             <Image
               src="/app/phone-splash.png"
               alt="Cheese Klick app launching"

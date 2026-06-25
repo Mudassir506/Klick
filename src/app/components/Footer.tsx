@@ -1,14 +1,16 @@
-import Logo from "./Logo";
+// import Logo from "./Logo"; // Footer logo removed for initial launch
 
 export default function Footer() {
   return (
     <footer className="border-t border-white/5 py-12">
       <div className="mx-auto max-w-7xl px-5">
         {/* Top row */}
-        <div className="flex flex-col items-start gap-8 sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex flex-col items-start gap-8 sm:items-end">
+          {/* Footer logo removed — nav + download buttons moved up.
           <Logo size={180} />
+          */}
 
-          <div className="flex flex-col items-start gap-4 sm:items-end">
+          <div className="flex w-full flex-col items-start gap-4 sm:items-end">
             <nav className="flex flex-wrap gap-x-8 gap-y-2 text-sm text-muted">
               <a href="/" className="transition hover:text-green">Home</a>
               <a href="/#download" className="transition hover:text-green">Download</a>
@@ -66,6 +68,8 @@ export default function Footer() {
             <p className="mt-1">Company No. <span className="text-white/70">SC892512</span></p>
           </div>
 
+          {/* Contact block removed from footer — handled on the dedicated /contact page.
+              Kept here (commented) in case it needs to be restored.
           <div>
             <p className="mb-1 font-semibold text-white/80">Contact</p>
             <a href="mailto:info@cheeseklick.com" className="block transition hover:text-green">
@@ -81,6 +85,7 @@ export default function Footer() {
               www.cheeseklick.com
             </a>
           </div>
+          */}
 
           <div className="sm:col-span-2 lg:col-span-1">
             <p className="mb-1 font-semibold text-white/80">Legal</p>

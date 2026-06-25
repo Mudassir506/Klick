@@ -37,9 +37,9 @@ export default function Header({
       }`}
     >
       <div className="mx-auto max-w-7xl px-5">
-        <div className="mt-2 flex items-center justify-between">
+        <div className="mt-1 flex items-center justify-between">
           <div className="flex items-center gap-16 lg:gap-65">
-            <Logo className="h-auto w-32 md:w-36" />
+            <Logo className="h-auto w-28 md:w-32" />
 
             <nav className="hidden items-center gap-9 md:flex">
               {nav.map((item) => (
