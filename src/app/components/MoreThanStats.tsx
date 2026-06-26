@@ -59,24 +59,24 @@ export default function MoreThanStats() {
     <section id="leaderboard" className="relative overflow-hidden py-24">
       <div className="pointer-events-none absolute -right-20 top-1/4 h-[520px] w-[520px] glow-green opacity-50" />
 
-      {/* leaderboard panel hidden — single column now (was: grid items-center gap-14 lg:grid-cols-2) */}
-      <div className="mx-auto max-w-7xl px-5">
+      {/* leaderboard panel hidden — centered single column so the right side isn't empty (was: grid items-center gap-14 lg:grid-cols-2) */}
+      <div className="mx-auto max-w-5xl px-5 text-center">
         {/* Left */}
-        <div>
+        <div className="flex flex-col items-center">
           <h2 className="font-display text-4xl uppercase leading-tight sm:text-5xl">
             More <span className="text-green">Than</span>
             <br />
             <span className="text-green">Stats.</span> It&apos;s A Game.
           </h2>
-          <p className="mt-5 max-w-md text-[15px] leading-relaxed text-muted">
+          <p className="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-muted">
             Stats apps make you search. We think you should just point and
             know. Klick any player, unlock instant stats across 6 sports, earn
             points, climb the leaderboard and become the best in the world.
           </p>
 
-          <div className="mt-9 grid max-w-md grid-cols-2 gap-x-8 gap-y-7">
+          <div className="mt-12 grid w-full max-w-3xl grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-4">
             {FEATURES.map((f) => (
-              <div key={f.title} className="flex flex-col gap-1">
+              <div key={f.title} className="flex flex-col items-center gap-1 text-center">
                 <span className="text-green">{f.icon}</span>
                 <span className="mt-1 font-display text-sm tracking-wide text-green">
                   {f.title}
@@ -88,7 +88,7 @@ export default function MoreThanStats() {
 
           <a
             href="#download"
-            className="mt-10 inline-block rounded-lg bg-green px-8 py-3 font-semibold text-black transition hover:bg-green-bright"
+            className="mt-12 inline-block rounded-lg bg-green px-8 py-3 font-semibold text-black transition hover:bg-green-bright"
           >
             Download
           </a>

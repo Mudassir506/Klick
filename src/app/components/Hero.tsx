@@ -147,31 +147,20 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative z-10 mx-auto mt-2 aspect-square w-full max-w-[400px] lg:ml-auto lg:mt-0 lg:max-w-[620px]">
+        <div className="relative z-10 mx-auto mt-2 w-full max-w-[440px] lg:ml-auto lg:mt-0 lg:max-w-[680px]">
           <div className="pointer-events-none absolute left-1/2 top-1/2 h-[72%] w-[88%] -translate-x-1/2 -translate-y-1/2 rounded-[46%] bg-green/15 blur-3xl" />
 
           <Spark className="animate-float-slow absolute left-[1%] top-[1%] z-30 h-8 w-8" />
           <Spark className="animate-float absolute left-[12%] top-[8%] z-30 h-4 w-4" />
 
-          <div className="animate-float-slow absolute left-[30%] top-[54%] z-10 w-[150%] -translate-x-1/2 -translate-y-1/2">
+          {/* Combined 3-phone mockup (Player Comparison / Search Players / Stats) */}
+          <div className="animate-float-slow relative z-10">
             <Image
-              src="/app/phone-splash.png"
-              alt="Cheese Klick app launching"
-              width={3000}
-              height={3000}
-              sizes="(max-width: 1024px) 60vw, 31vw"
-              className="h-auto w-full"
-              priority
-            />
-          </div>
-
-          <div className="animate-float absolute left-[63%] top-[55%] z-20 w-[146%] -translate-x-1/2 -translate-y-1/2">
-            <Image
-              src="/app/phone-home.png"
-              alt="Cheese Klick home screen"
-              width={3000}
-              height={3000}
-              sizes="(max-width: 1024px) 70vw, 36vw"
+              src="/app/hero-mockup.png"
+              alt="Cheese Klick app — compare players, search and instant stats"
+              width={958}
+              height={806}
+              sizes="(max-width: 1024px) 90vw, 42vw"
               className="h-auto w-full"
               priority
             />
