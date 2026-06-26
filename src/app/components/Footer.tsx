@@ -4,7 +4,12 @@ export default function Footer() {
   return (
     <footer className="border-t border-white/5 py-12">
       <div className="mx-auto max-w-7xl px-5">
-        {/* Top row */}
+        {/* Top row — nav links + App Store/Google Play badges.
+            Removed per client: it duplicates the header nav, the hero download
+            badges, and the Privacy/Terms links in the Legal block below.
+            Hidden (not deleted) with {false && (...)} so it can be restored. */}
+        {false && (
+        <>
         <div className="flex flex-col items-start gap-8 sm:items-end">
           {/* Footer logo removed — nav + download buttons moved up.
           <Logo size={180} />
@@ -57,6 +62,8 @@ export default function Footer() {
 
         {/* Divider */}
         <div className="my-8 border-t border-white/5" />
+        </>
+        )}
 
         {/* Legal info */}
         <div className="grid gap-4 text-sm text-muted sm:grid-cols-2 lg:grid-cols-3">
