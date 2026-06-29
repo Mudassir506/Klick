@@ -105,7 +105,7 @@ export default function Hero() {
 
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-[1fr_1.05fr] lg:gap-6">
         <div className="relative z-10 text-center lg:text-left">
-          <h1 className="font-display text-[clamp(2.4rem,6vw,5.25rem)] uppercase leading-[1.04]">
+          <h1 className="font-display text-[clamp(1.9rem,6vw,5.25rem)] uppercase leading-[1.04]">
             <span className="whitespace-nowrap">
               <span className="text-green">Klick</span>.
             </span>

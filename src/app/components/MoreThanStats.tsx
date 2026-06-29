@@ -65,7 +65,7 @@ export default function MoreThanStats() {
       <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-2">
         {/* Left */}
         <div>
-          <h2 className="font-display text-4xl uppercase leading-tight sm:text-5xl">
+          <h2 className="font-display text-3xl uppercase leading-tight sm:text-5xl">
             More <span className="text-green">Than</span>
             <br />
             <span className="text-green">Stats.</span> It&apos;s A Game.

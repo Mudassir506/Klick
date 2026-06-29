@@ -30,7 +30,7 @@ export default function About() {
         </div>
 
         <div>
-          <h2 className="font-display text-5xl sm:text-6xl">
+          <h2 className="font-display text-3xl sm:text-6xl">
             Built By Sports Fans.
             <br />
             <span className="text-green">For Sports Fans.</span>

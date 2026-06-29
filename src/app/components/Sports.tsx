@@ -1,35 +1,48 @@
 import Image from "next/image";
 
 const SPORTS = [
-  { img: "/app/sport-football.png", name: "Football" },
-  { img: "/app/sport-basketball.png", name: "Basketball" },
-  { img: "/app/sport-tennis.png", name: "Tennis" },
-  { img: "/app/sport-american-football.png", name: "American Football" },
-  { img: "/app/sport-formula1.png", name: "Formula 1" },
-  { img: "/app/sport-golf.png", name: "Golf" },
+  { img: "/app/sports/football.jpg", name: "Football", stats: "Goals · Assists · Stats" },
+  { img: "/app/sports/basketball.jpg", name: "Basketball", stats: "Points · Rebounds · Stats" },
+  { img: "/app/sports/american-football.jpg", name: "American Football", stats: "Yards · Touchdowns · Stats" },
+  { img: "/app/sports/formula1.jpg", name: "Formula 1", stats: "Lap Times · Positions · Stats" },
+  { img: "/app/sports/golf.jpg", name: "Golf", stats: "Handicap · Rounds · Stats" },
+  { img: "/app/sports/tennis.jpg", name: "Tennis", stats: "Aces · Winners · Stats" },
 ];
 
 export default function Sports() {
   return (
-    <section className="py-16">
-      <div className="mx-auto max-w-7xl px-5">
-        <p className="mb-10 text-center text-sm font-bold uppercase tracking-[0.15em] text-green">
-          One App. Six Sports.
-        </p>
-        <div className="grid grid-cols-3 gap-4 sm:grid-cols-6">
-          {SPORTS.map((s) => (
+    <section className="py-20">
+      <div className="mx-auto max-w-6xl px-5">
+        <h2 className="mb-12 text-center font-display text-3xl uppercase sm:text-5xl">
+          One App. <span className="text-green">Six Sports.</span>
+        </h2>
+
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {SPORTS.map((s, i) => (
             <div
               key={s.name}
-              className="flex flex-col items-center gap-3 rounded-2xl border border-white/5 bg-card px-4 py-6 text-center transition hover:border-green/40"
+              className={`group relative aspect-[4/5] overflow-hidden rounded-2xl border transition ${
+                i === 0 ? "border-green/70" : "border-white/10 hover:border-green/40"
+              }`}
             >
               <Image
                 src={s.img}
                 alt={s.name}
-                width={56}
-                height={56}
-                className="h-14 w-14 object-contain"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover transition duration-500 group-hover:scale-105"
               />
-              <span className="text-sm font-semibold text-white/80">{s.name}</span>
+              {/* Dark gradient so the label is always readable */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/15 to-transparent" />
+
+              <div className="absolute inset-x-0 bottom-0 p-5">
+                <h3 className="font-display text-lg uppercase tracking-wide text-white">
+                  {s.name}
+                </h3>
+                <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-green/90">
+                  {s.stats}
+                </p>
+              </div>
             </div>
           ))}
         </div>

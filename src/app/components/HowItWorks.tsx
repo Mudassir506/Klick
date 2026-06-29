@@ -1,65 +1,67 @@
 import Image from "next/image";
 
 const STEPS = [
-  { n: "1", label: "SEE A PLAYER", img: "/app/see-player.png", green: false, position: "center" },
-  { n: "2", label: "KLICK A PIC", img: "/app/klick-a-pic.png", green: true, position: "center" },
-  // coach sits on the left of the source photo — pull the crop left so he's centred (like Figma)
-  { n: "3", label: "GET INSTANT STATS", img: "/app/instant-stats.png", green: false, position: "left" },
-  { n: "4", label: "COMPARE & WIN", img: "/app/compare-win.png", green: false, position: "center" },
+  {
+    n: "01",
+    label: "SEE A PLAYER",
+    img: "/app/how/see-player.jpg",
+    desc: "Whether you're at the stadium or watching from home on the couch.",
+  },
+  {
+    n: "02",
+    label: "KLICK A PIC",
+    img: "/app/how/klick-a-pic.jpg",
+    desc: "Point your camera at any player on the pitch or screen.",
+  },
+  {
+    n: "03",
+    label: "GET INSTANT STATS",
+    img: "/app/how/instant-stats.jpg",
+    desc: "Instant access to live performance data and heatmaps.",
+  },
+  {
+    n: "04",
+    label: "COMPARE & WIN",
+    img: "/app/how/compare-win.jpg",
+    desc: "Compare players side-by-side to make informed decisions.",
+  },
 ];
 
 export default function HowItWorks() {
   return (
     <section id="how" className="py-24">
-      <div className="mx-auto max-w-7xl px-5">
-        <h2 className="text-center font-display text-4xl uppercase sm:text-5xl">
+      <div className="mx-auto max-w-5xl px-5">
+        <h2 className="text-center font-display text-3xl uppercase sm:text-5xl">
           How It Works
         </h2>
 
-        {/* 4 flush cards, like the Figma */}
-        <div className="mt-14 grid grid-cols-2 gap-1.5 lg:grid-cols-4">
+        {/* 2 x 2 cards, like the Figma — photo on top, step text below */}
+        <div className="mt-14 grid gap-5 sm:grid-cols-2">
           {STEPS.map((s) => (
             <div
               key={s.n}
-              className="group relative aspect-[3/4] overflow-hidden"
+              className="group overflow-hidden rounded-2xl border border-white/10 bg-card transition hover:border-green/40"
             >
-              {/* photo — desaturated, except the green KLICK A PIC card */}
-              <Image
-                src={s.img}
-                alt={s.label}
-                fill
-                sizes="(max-width: 1024px) 50vw, 25vw"
-                style={{ objectPosition: s.position }}
-                className={`object-cover ${s.green ? "" : "grayscale"}`}
-              />
-
-              {/* tint: Figma green linear-gradient on card 2, dark mute on the rest */}
-              {s.green ? (
-                <div
-                  className="absolute inset-0"
-                  style={{
-                    background:
-                      "linear-gradient(180deg, rgba(169,255,160,0) 50%, rgba(169,255,160,1) 100%)",
-                  }}
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <Image
+                  src={s.img}
+                  alt={s.label}
+                  fill
+                  sizes="(max-width: 640px) 100vw, 50vw"
+                  className="object-cover transition duration-500 group-hover:scale-105"
                 />
-              ) : (
-                <div className="absolute inset-0 bg-black/45" />
-              )}
+              </div>
 
-              {/* big watermark number */}
-              <span
-                className={`pointer-events-none absolute inset-0 flex items-center justify-center font-display text-[8rem] leading-none sm:text-[11rem] ${
-                  s.green ? "text-black/25" : "text-white/25"
-                }`}
-              >
-                {s.n}
-              </span>
-
-              {/* label — bottom-left */}
-              <div className="absolute inset-x-0 bottom-0 p-4">
-                <span className="text-xs font-semibold uppercase tracking-wide text-white sm:text-sm">
-                  {s.label}
+              <div className="p-5">
+                <span className="font-display text-xs uppercase tracking-[0.15em] text-green">
+                  Step {s.n}
                 </span>
+                <h3 className="mt-1 font-display text-lg uppercase tracking-wide text-white">
+                  {s.label}
+                </h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                  {s.desc}
+                </p>
               </div>
             </div>
           ))}

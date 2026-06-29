@@ -37,10 +37,9 @@ export default function Header({
       }`}
     >
       <div className="mx-auto max-w-7xl px-5">
-        <div className="mt-1 flex items-center justify-between">
-          <div className="flex items-center gap-16 lg:gap-65">
-            <Logo className="h-auto w-28 md:w-32" />
-
+        <div className="mt-1 flex items-center">
+          {/* Left — nav (desktop); empty spacer on mobile keeps the logo centred */}
+          <div className="flex flex-1 items-center">
             <nav className="hidden items-center gap-9 md:flex">
               {nav.map((item) => (
                 <a
@@ -54,7 +53,11 @@ export default function Header({
             </nav>
           </div>
 
-          <div className="flex items-center gap-3">
+          {/* Centre — logo */}
+          <Logo className="h-auto w-28 shrink-0 md:w-32" />
+
+          {/* Right — actions */}
+          <div className="flex flex-1 items-center justify-end gap-3">
             {showContact && (
               <a
                 href="/contact"
