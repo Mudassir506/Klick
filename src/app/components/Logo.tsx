@@ -10,10 +10,10 @@ export default function Logo({
   return (
     <a href="/" className="flex items-center gap-2 shrink-0">
       <Image
-        src="/app/logo.png"
+        src="/app/logo-v2.png"
         alt="Cheese Klick"
-        width={className ? 1024 : size}
-        height={className ? 1024 : size}
+        width={className ? 716 : size}
+        height={className ? 647 : size}
         className={`object-contain drop-shadow-[0_0_12px_rgba(169,255,160,0.35)]${
           className ? ` ${className}` : ""
         }`}
