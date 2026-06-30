@@ -2,25 +2,25 @@ import Image from "next/image";
 
 const STEPS = [
   {
-    n: "01",
+    n: "1",
     label: "SEE A PLAYER",
     img: "/app/how/see-player.jpg",
     desc: "Whether you're at the stadium or watching from home on the couch.",
   },
   {
-    n: "02",
+    n: "2",
     label: "KLICK A PIC",
     img: "/app/how/klick-a-pic.jpg",
     desc: "Point your camera at any player on the pitch or screen.",
   },
   {
-    n: "03",
+    n: "3",
     label: "GET INSTANT STATS",
     img: "/app/how/instant-stats.jpg",
     desc: "Instant access to live performance data and heatmaps.",
   },
   {
-    n: "04",
+    n: "4",
     label: "COMPARE & WIN",
     img: "/app/how/compare-win.jpg",
     desc: "Compare players side-by-side to make informed decisions.",

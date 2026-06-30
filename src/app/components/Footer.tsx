@@ -66,7 +66,7 @@ export default function Footer() {
         )}
 
         {/* Legal info */}
-        <div className="grid gap-4 text-sm text-muted sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 text-xs text-muted sm:grid-cols-2 lg:grid-cols-3">
           <div>
             <p className="mb-1 font-semibold text-white/80">JKE Technologies Ltd</p>
             <p>4 Rogart Street, Rogart Street Campus</p>
