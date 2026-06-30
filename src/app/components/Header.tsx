@@ -9,7 +9,6 @@ const NAV: NavItem[] = [
   { label: "Home", href: "/#home" },
   { label: "How It Works", href: "/#how" },
   { label: "Download", href: "/#download" },
-  { label: "Contact", href: "/contact" },
 ];
 
 export default function Header({
@@ -61,7 +60,7 @@ export default function Header({
             {/* "Contact Us" button removed per client — it duplicates the
                 "Contact" link already in the nav. Hidden (not deleted) with
                 {false && (...)} so it can be restored. */}
-            {false && showContact && (
+            {showContact && (
               <a
                 href="/contact"
                 className="hidden rounded-full border border-white/15 bg-white/5 px-7 py-3 text-base font-semibold uppercase tracking-wide text-white transition hover:border-green/60 hover:text-green sm:inline-block"
